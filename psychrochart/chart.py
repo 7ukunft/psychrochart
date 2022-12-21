@@ -373,15 +373,15 @@ class PsychroChart:
                             **style,
                         )
                     )
-                    self._handlers_annotations.append(
-                        self.axes.plot(
-                            x_line,
-                            y_line,
-                            color=list(style["color"][:3]) + [0.15],
-                            lw=50,
-                            solid_capstyle="round",
-                        )
-                    )
+                  #  self._handlers_annotations.append(
+                  #      self.axes.plot(
+                  #          x_line,
+                  #          y_line,
+                  #          color=list(style["color"][:3]) + [0.15],
+                  #          lw=50,
+                  #          solid_capstyle="round",
+                  #      )
+                  #  )
 
         for point in points_plot.values():
             func_append = self.axes.scatter if use_scatter else self.axes.plot
@@ -571,7 +571,7 @@ class PsychroChart:
             )
             if step_label:  # Explicit xticks
                 ticks = np.arange(
-                    self.w_min, self.w_max + step_label / 10, step_label
+                    self.w_min, self.w_max + step_label / 5, step_label
                 )
                 if not self.chart_params.get(
                     "constant_humid_label_include_limits", True
