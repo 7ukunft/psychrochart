@@ -569,6 +569,7 @@ class PsychroChart:
             step_label = self.chart_params.get(
                 "constant_humid_label_step", None
             )
+            step_label = 5.
             if step_label:  # Explicit xticks
                 ticks = np.arange(
                     self.w_min, self.w_max + step_label / 5, step_label
